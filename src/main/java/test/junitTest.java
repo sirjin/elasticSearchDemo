@@ -29,8 +29,8 @@ public class junitTest {
         //elasticUtil.createDocument(json,INDEX,TYPE,ID);
 
         //elasticUtil.getDocument(INDEX,TYPE,ID);
-        elasticUtil.search(INDEX,TYPE,"message","偏");
+        //elasticUtil.search(INDEX,TYPE,"message","偏");
         //elasticUtil.deleteDocument(INDEX,TYPE,ID);
-        //elasticUtil.count(INDEX,"_type",TYPE);
+        elasticUtil.count(INDEX,"_type",TYPE);
     }
 }
