@@ -16,13 +16,13 @@ public class junitTest {
     private static final String ID = "1";
 
     @Test
-    public void test(){
+    public void baseTest(){
 
-        Map<String, Object> json = new HashMap<String, Object>();
+        /*Map<String, Object> json = new HashMap<String, Object>();
         json.put("user", "byor");
         json.put("postDate", new Date());
         json.put("message", "time out");
-        json.put("context", "偏yaogggg");
+        json.put("context", "偏yaogggg");*/
 
         //elasticUtil.updateDocument(json,INDEX,TYPE,"5");
         //elasticUtil.upsertDocument(json,INDEX,TYPE,"6");
@@ -32,5 +32,12 @@ public class junitTest {
         //elasticUtil.search(INDEX,TYPE,"message","偏");
         //elasticUtil.deleteDocument(INDEX,TYPE,ID);
         elasticUtil.count(INDEX,"_type",TYPE);
+    }
+
+    @Test
+    public void highLight(){
+        //elasticHighLightUtil.searchKey(INDEX,"12");
+        //elasticHighLightUtil.search05(INDEX,TYPE,"message","time");
+        elasticHighLightUtil.search03(INDEX,TYPE);
     }
 }
